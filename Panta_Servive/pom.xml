@@ -2,11 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    
+
     <groupId>com.panta</groupId>
-    <artifactId>Panta_Eureka</artifactId>
+    <artifactId>Panta_Servive</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Panta_Eureka</name>
+    <name>Panta_Servive</name>
 
     <!-- 引用父对象-->
     <parent>
@@ -14,12 +14,12 @@
         <artifactId>Model_Panta</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    
+
     <dependencies>
-        <!-- Eureka服务端 -->
+        <!-- Eureka客户端 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
     </dependencies>
 

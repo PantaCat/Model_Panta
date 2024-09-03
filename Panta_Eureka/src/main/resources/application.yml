@@ -1,12 +1,10 @@
-# Tomcat
 server:
   port: 9000
 
 # Spring
 spring:
   application:
-    # ????
-    name: Panta_Eureka
+    name: panta-eureka
 eureka:
   client:
     register-with-eureka: false

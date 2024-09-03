@@ -8,6 +8,7 @@
     <artifactId>Model_Panta</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Model_Panta</name>
+
     <packaging>pom</packaging>
 
     <!-- 1 确定spring boot的版本-->
@@ -22,6 +23,7 @@
     <properties>
         <java.version>17</java.version>
         <spring-cloud.version>2023.0.3</spring-cloud.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <!-- 3 锁定sprig cloud版本-->
@@ -58,6 +60,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
