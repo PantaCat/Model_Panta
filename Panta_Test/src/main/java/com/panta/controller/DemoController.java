@@ -1,6 +1,8 @@
 package com.panta.controller;
 
 import com.panta.config.EurekaInstanceConfig;
+import com.panta.mapper.PantaLinkMapper;
+import com.panta.model.PantaLink;
 import jakarta.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -24,6 +26,9 @@ public class DemoController {
     private RestTemplate restTemplate;
     @Resource
     private DiscoveryClient discoveryClient;
+    @Resource
+    private PantaLinkMapper pantLinkMapper;
+
     @PostMapping("/hello")
     public String hello(){
         List<ServiceInstance> instances = discoveryClient.getInstances("PantaServive");
@@ -41,6 +46,12 @@ public class DemoController {
         HttpEntity<String> entity = new HttpEntity<>(jsonBody, headers);
 
         return restTemplate.postForObject(url,entity, String.class);
+    }
+
+    @PostMapping("/saveData")
+    public String saveData(){
+        pantLinkMapper.insert(new PantaLink());
+        return "okk";
     }
 
 }
