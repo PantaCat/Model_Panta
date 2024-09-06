@@ -1,6 +1,6 @@
 package com.panta.config;
 
-import com.panta.handler.MyMetaObjectHandler;
+import com.panta.config.handler.MyMetaObjectHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

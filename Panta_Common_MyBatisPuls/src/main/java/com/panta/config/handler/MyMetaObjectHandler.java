@@ -1,4 +1,4 @@
-package com.panta.handler;
+package com.panta.config.handler;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;

@@ -1,0 +1,16 @@
+server:
+  port: 9002
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: panta-common-mybatispuls
+  datasource:
+    url: jdbc:mysql://175.178.1.5:3306/panta?useSSL=false&serverTimezone=UTC
+    username: root
+    password: Panta1023
+    driver-class-name: com.mysql.cj.jdbc.Driver
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka

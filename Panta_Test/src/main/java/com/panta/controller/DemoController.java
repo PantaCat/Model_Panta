@@ -1,8 +1,7 @@
 package com.panta.controller;
 
 import com.panta.config.EurekaInstanceConfig;
-import com.panta.mapper.PantaLinkMapper;
-import com.panta.model.PantaLink;
+import com.panta.feignClients.PantaCommonMyBatisPulsClients;
 import jakarta.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -26,8 +25,8 @@ public class DemoController {
     private RestTemplate restTemplate;
     @Resource
     private DiscoveryClient discoveryClient;
-    @Resource
-    private PantaLinkMapper pantLinkMapper;
+    @Autowired
+    private PantaCommonMyBatisPulsClients pantaCommonMyBatisPulsClients;
 
     @PostMapping("/hello")
     public String hello(){
@@ -50,7 +49,7 @@ public class DemoController {
 
     @PostMapping("/saveData")
     public String saveData(){
-        pantLinkMapper.insert(new PantaLink());
+        pantaCommonMyBatisPulsClients.saveData("小辣鸡");
         return "okk";
     }
 

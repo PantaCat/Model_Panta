@@ -1,15 +1,15 @@
 package com.panta;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 
-@EnableFeignClients
+@MapperScan("com.panta.mapper")
 @SpringBootApplication
-public class PantaTestApplication {
+public class PantaCommonMyBatisPulsApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(PantaTestApplication.class, args);
+        SpringApplication.run(PantaCommonMyBatisPulsApplication.class, args);
     }
 
 }
